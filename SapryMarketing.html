@@ -677,23 +677,28 @@
 
     .hero-img-badge {
       position: absolute;
-      bottom: -24px;
-      left: -24px;
+      bottom: -10px;
+      left: -10px;
       background: var(--accent);
       color: white;
       border-radius: 12px;
-      padding: 16px 20px;
+      padding: 10px 14px;
       box-shadow: 0 8px 24px rgba(232, 160, 32, 0.35);
+      z-index: 5;
     }
 
     .hero-img-badge strong {
       display: block;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       font-family: 'Playfair Display', serif;
+      line-height: 1;
+      margin-bottom: 2px;
     }
 
     .hero-img-badge span {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       opacity: 0.9;
     }
 
@@ -736,6 +741,49 @@
 
     .float-btn:hover {
       opacity: 0.9;
+    }
+
+    /* Sustainability Image Card */
+    .sustainability-img-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .sustainability-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .sustainability-img-card {
+        height: auto;
+        aspect-ratio: 1;
+      }
+
+      .sustainability-img-card img {
+        object-fit: contain;
+        background: #071d4a;
+        /* Match section bg */
+      }
+
+      .floating-enquiry {
+        transform: translateY(-50%) scale(0.85);
+        right: -5px;
+        opacity: 0.7;
+      }
+
+      .floating-enquiry:hover {
+        opacity: 1;
+        right: 0;
+      }
     }
 
     /* ===== FEATURES STRIP ===== */
@@ -856,25 +904,27 @@
 
     .experience-badge {
       position: absolute;
-      top: 20px;
-      left: -20px;
+      top: -15px;
+      left: -15px;
       background: var(--accent);
       color: white;
-      padding: 20px 22px;
+      padding: 14px 18px;
       border-radius: 14px;
       text-align: center;
       box-shadow: 0 8px 24px rgba(232, 160, 32, 0.3);
-      z-index: 2;
+      z-index: 10;
     }
 
     .experience-badge strong {
       display: block;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-family: 'Playfair Display', serif;
+      line-height: 1;
+      margin-bottom: 4px;
     }
 
     .experience-badge span {
-      font-size: 0.78rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       opacity: 0.9;
@@ -1888,7 +1938,12 @@
       }
 
       .about-images {
-        height: 320px;
+        height: auto;
+        margin-bottom: 40px;
+      }
+
+      .about-img-1 {
+        height: 300px;
       }
 
       .about-img-2 {
@@ -1896,8 +1951,18 @@
       }
 
       .experience-badge {
-        top: 10px;
-        left: 10px;
+        top: -10px;
+        left: -10px;
+        padding: 10px 14px;
+      }
+
+      .experience-badge strong {
+        font-size: 1.5rem;
+      }
+
+      .why-img {
+        height: 280px;
+        margin-bottom: 20px;
       }
 
       .footer-grid {
@@ -2088,6 +2153,10 @@
                 Packing Machine</a>
               <a href="#products" class="dropdown-item"
                 onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging Machine</a>
+              <a href="#products" class="dropdown-item"
+                onclick="filterProductsByFolder('d-motion-type-packaging-machine')">D-Motion Type Packaging Machine</a>
+              <a href="#products" class="dropdown-item"
+                onclick="filterProductsByFolder('rasgulla-ball-making-machine')">Rasgulla Ball Making Machine</a>
             </div>
           </div>
           <a href="#why" class="nav-link">Quality</a>
@@ -2118,6 +2187,10 @@
             <a href="#products" onclick="filterProductsByFolder('snack packing machine')">Snack Packing Machine</a>
             <a href="#products" onclick="filterProductsByFolder('tea packing machine')">Tea Packing Machine</a>
             <a href="#products" onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('d-motion-type-packaging-machine')">D-Motion Type
+              Packaging Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('rasgulla-ball-making-machine')">Rasgulla Ball Making
+              Machine</a>
           </div>
         </div>
         <a href="#about" class="mobile-nav-link">About Us</a>
@@ -2288,6 +2361,10 @@
         <button class="filter-btn" onclick="filterProducts(this,'snack packing machine')">Snack Packing Machine</button>
         <button class="filter-btn" onclick="filterProducts(this,'tea packing machine')">Tea Packing Machine</button>
         <button class="filter-btn" onclick="filterProducts(this,'spice packaging machine')">Spice Packaging
+          Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'d-motion-type-packaging-machine')">D-Motion Type
+          Packaging Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'rasgulla-ball-making-machine')">Rasgulla Ball Making
           Machine</button>
       </div>
 
@@ -2525,6 +2602,37 @@
                 class="fas fa-arrow-right"></i></a>
           </div>
         </div>
+
+        <!-- D-Motion Type Packaging Machine -->
+        <div class="product-card fade-up delay-1" data-cat="d-motion-type-packaging-machine">
+          <div class="product-img">
+            <img
+              src="images/images/d-motion-type-packaging-machine/D-Motion Type Packaging Machine Model No. FP-150.png"
+              alt="D-Motion Type Packaging Machine Model No. FP-150" />
+          </div>
+          <div class="product-body">
+            <h3>D-Motion Type Packaging Machine</h3>
+            <p>Model No. FP-150. Advanced D-Motion technology for high-speed, precision packaging of delicate products.
+            </p>
+            <a href="FP-150.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Rasgulla Ball Making Machine -->
+        <div class="product-card fade-up delay-1" data-cat="rasgulla-ball-making-machine">
+          <div class="product-img">
+            <img
+              src="images/images/rasgulla-ball-making-machine/Automatic Cutting Proportioning & Shaping Machine Modal No. FP1200.png"
+              alt="Automatic Cutting Proportioning & Shaping Machine Modal No. FP1200" />
+          </div>
+          <div class="product-body">
+            <h3>Rasgulla Ball Making Machine</h3>
+            <p>Model No. FP1200. Automatic cutting, proportioning, and shaping for uniform rasgulla production.</p>
+            <a href="FP1200.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2726,9 +2834,8 @@
           </div>
         </div>
         <div class="fade-up delay-2">
-          <div
-            style="border-radius:16px;overflow:hidden;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);height:420px;display:flex;align-items:center;justify-content:center;">
-            <img src="images/images/home_page/sustainable.png" alt="Sustainability at Sapry Marketing" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="sustainability-img-card">
+            <img src="images/images/home_page/sustainable.png" alt="Sustainability at Sapry Marketing" />
           </div>
         </div>
       </div>
@@ -2813,39 +2920,39 @@
         <div class="testimonial-card fade-up delay-1">
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>Sapry Marketing supplied and commissioned a complete conveyor line for our plant. Their team's technical
-            knowledge and post-installation support has been outstanding.</p>
+          <p>The FP-350 collar packing machine from Sapry Marketing has been a game-changer for our snack production.
+            The speed and precision are exactly what we needed to scale our Fryums line successfully.</p>
           <div class="testimonial-author">
             <div class="author-avatar">RK</div>
             <div>
               <div class="author-name">Ravi Kumar</div>
-              <div class="author-role">Plant Manager, Manufacturing Co.</div>
+              <div class="author-role">Production Manager, Snack Foods India</div>
             </div>
           </div>
         </div>
         <div class="testimonial-card fade-up delay-2">
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>We procured CNC machining centres through Sapry Marketing. The machines are of excellent quality, delivery
-            was on time, and the AMC team is very responsive.</p>
+          <p>We recently installed the FP1200 Rasgulla Ball Making Machine. The consistency in weight and shape of the
+            balls is remarkable. It has significantly reduced our manual labor while increasing output.</p>
           <div class="testimonial-author">
             <div class="author-avatar">SM</div>
             <div>
               <div class="author-name">Suresh Mehta</div>
-              <div class="author-role">Director, Engineering Works</div>
+              <div class="author-role">Director, Mehta Sweets & Snacks</div>
             </div>
           </div>
         </div>
         <div class="testimonial-card fade-up delay-3">
           <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
-          <p>Their hydraulic press machines have significantly improved our production efficiency. Sapry Marketing's
-            consultative approach helped us choose exactly the right equipment.</p>
+          <p>The D-Motion Type Packaging Machine (FP-150) is incredibly versatile. We use it for various namkeen
+            products, and the seal quality is top-notch. Sapry's support during installation was excellent.</p>
           <div class="testimonial-author">
             <div class="author-avatar">AP</div>
             <div>
               <div class="author-name">Anand Patil</div>
-              <div class="author-role">Operations Head, Auto Components Ltd.</div>
+              <div class="author-role">Operations Head, Authentic Namkeen Ltd.</div>
             </div>
           </div>
         </div>
@@ -2929,14 +3036,13 @@
               <label for="product">Product Interest</label>
               <select id="product">
                 <option value="">Select a Product / Category</option>
-                <option>CNC Machining Centres</option>
-                <option>Hydraulic Press Machines</option>
-                <option>Pneumatic Systems</option>
-                <option>Conveyor & Elevator Systems</option>
-                <option>Forklifts & Electric Stackers</option>
-                <option>Industrial Mixers & Blenders</option>
-                <option>Electrical & Automation Equipment</option>
-                <option>Safety Equipment</option>
+                <option>Fryums Packing Machine</option>
+                <option>Namkeen Packing Machine</option>
+                <option>Snack Packing Machine</option>
+                <option>Tea Packing Machine</option>
+                <option>Spice Packaging Machine</option>
+                <option>D-Motion Type Packaging Machine</option>
+                <option>Rasgulla Ball Making Machine</option>
                 <option>General Enquiry / Other</option>
               </select>
             </div>
@@ -2969,13 +3075,7 @@
             </div>
             <p>Sapry Marketing Pvt. Ltd. is a trusted supplier and marketing partner for industrial equipment and
               machinery, delivering quality-assured solutions with expert technical support across India.</p>
-            <div class="footer-social">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
+
           </div>
 
           <div class="footer-col">
@@ -2999,6 +3099,10 @@
               <a href="#products" onclick="filterProductsByFolder('snack packing machine')">Snack Packing Machine</a>
               <a href="#products" onclick="filterProductsByFolder('tea packing machine')">Tea Packing Machine</a>
               <a href="#products" onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging
+                Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('d-motion-type-packaging-machine')">D-Motion Type
+                Packaging Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('rasgulla-ball-making-machine')">Rasgulla Ball Making
                 Machine</a>
             </div>
           </div>
@@ -3142,8 +3246,12 @@
     document.addEventListener('DOMContentLoaded', () => {
       const firstFilterBtn = document.querySelector('.filter-btn.active');
       if (firstFilterBtn) {
-        const cat = firstFilterBtn.textContent.trim();
-        // Trigger filter but without changing active class (already done in HTML)
+        // Find the second argument of the onclick attribute: filterProducts(this, 'Category Name')
+        const onclickAttr = firstFilterBtn.getAttribute('onclick');
+        const match = onclickAttr.match(/filterProducts\(this,\s*['"](.+?)['"]\)/);
+        const cat = match ? match[1] : firstFilterBtn.textContent.trim();
+
+        // Trigger initial filter
         document.querySelectorAll('.product-card').forEach(card => {
           if (card.dataset.cat === cat) card.style.display = '';
           else card.style.display = 'none';
