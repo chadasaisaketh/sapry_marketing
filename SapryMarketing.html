@@ -1026,7 +1026,8 @@
     .product-img img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 10px;
       transition: transform 0.4s ease;
     }
 
@@ -2077,32 +2078,16 @@
           <div class="dropdown">
             <a href="#products" class="nav-link has-dropdown">Our Products</a>
             <div class="dropdown-menu">
-              <div class="has-sub">
-                <a href="#products" class="dropdown-item">Industrial Machinery</a>
-                <div class="sub-menu">
-                  <a href="#products" class="dropdown-item">CNC Machines</a>
-                  <a href="#products" class="dropdown-item">Hydraulic Presses</a>
-                  <a href="#products" class="dropdown-item">Pneumatic Systems</a>
-                </div>
-              </div>
-              <div class="has-sub">
-                <a href="#products" class="dropdown-item">Material Handling</a>
-                <div class="sub-menu">
-                  <a href="#products" class="dropdown-item">Conveyors & Elevators</a>
-                  <a href="#products" class="dropdown-item">Forklifts & Stackers</a>
-                  <a href="#products" class="dropdown-item">Storage Systems</a>
-                </div>
-              </div>
-              <div class="has-sub">
-                <a href="#products" class="dropdown-item">Process Equipment</a>
-                <div class="sub-menu">
-                  <a href="#products" class="dropdown-item">Mixing & Blending</a>
-                  <a href="#products" class="dropdown-item">Filtration Systems</a>
-                  <a href="#products" class="dropdown-item">Heat Exchangers</a>
-                </div>
-              </div>
-              <a href="#products" class="dropdown-item">Electrical & Automation</a>
-              <a href="#products" class="dropdown-item">Safety Equipment</a>
+              <a href="#products" class="dropdown-item"
+                onclick="filterProductsByFolder('Fryums Packing Machine')">Fryums Packing Machine</a>
+              <a href="#products" class="dropdown-item"
+                onclick="filterProductsByFolder('namkeen packing machine')">Namkeen Packing Machine</a>
+              <a href="#products" class="dropdown-item" onclick="filterProductsByFolder('snack packing machine')">Snack
+                Packing Machine</a>
+              <a href="#products" class="dropdown-item" onclick="filterProductsByFolder('tea packing machine')">Tea
+                Packing Machine</a>
+              <a href="#products" class="dropdown-item"
+                onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging Machine</a>
             </div>
           </div>
           <a href="#why" class="nav-link">Quality</a>
@@ -2128,11 +2113,11 @@
             Our Products <i class="fas fa-chevron-down"></i>
           </div>
           <div class="mobile-sub">
-            <a href="#products">Industrial Machinery</a>
-            <a href="#products">Material Handling Equipment</a>
-            <a href="#products">Process Equipment</a>
-            <a href="#products">Electrical & Automation</a>
-            <a href="#products">Safety Equipment</a>
+            <a href="#products" onclick="filterProductsByFolder('Fryums Packing Machine')">Fryums Packing Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('namkeen packing machine')">Namkeen Packing Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('snack packing machine')">Snack Packing Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('tea packing machine')">Tea Packing Machine</a>
+            <a href="#products" onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging Machine</a>
           </div>
         </div>
         <a href="#about" class="mobile-nav-link">About Us</a>
@@ -2308,96 +2293,248 @@
       </div>
 
       <div class="products-filter fade-up">
-        <button class="filter-btn active" onclick="filterProducts(this,'all')">All Equipment</button>
-        <button class="filter-btn" onclick="filterProducts(this,'machinery')">Industrial Machinery</button>
-        <button class="filter-btn" onclick="filterProducts(this,'handling')">Material Handling</button>
-        <button class="filter-btn" onclick="filterProducts(this,'process')">Process Equipment</button>
+        <button class="filter-btn active" onclick="filterProducts(this,'Fryums Packing Machine')">Fryums Packing
+          Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'namkeen packing machine')">Namkeen Packing
+          Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'snack packing machine')">Snack Packing Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'tea packing machine')">Tea Packing Machine</button>
+        <button class="filter-btn" onclick="filterProducts(this,'spice packaging machine')">Spice Packaging
+          Machine</button>
       </div>
 
       <div class="products-grid" id="productsGrid">
-        <div class="product-card fade-up delay-1" data-cat="machinery">
+        <!-- Fryums Packing Machine -->
+        <div class="product-card fade-up delay-1" data-cat="Fryums Packing Machine">
           <div class="product-img">
-            <!-- <img src="product-cnc.jpg" alt="CNC Machine" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-cnc.jpg</p>
-            </div>
-            <div class="product-badge">Featured</div>
+            <img src="images/images/Fryums Packing Machine/FP-350 collar packing.png" alt="FP-350 Collar Packing" />
           </div>
           <div class="product-body">
-            <h3>CNC Machining Centres</h3>
-            <p>High-precision CNC vertical and horizontal machining centres for metal cutting, milling, and drilling
-              operations in automotive and engineering industries.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>FP-350 Collar Packing</h3>
+            <p>Advanced collar type packing machine designed for efficient Fryums packaging with precision control.</p>
+            <a href="FP-350-collar-packing.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="product-card fade-up delay-2" data-cat="machinery">
+        <div class="product-card fade-up delay-2" data-cat="Fryums Packing Machine">
           <div class="product-img">
-            <!-- <img src="product-hydraulic.jpg" alt="Hydraulic Press" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-hydraulic.jpg</p>
-            </div>
+            <img src="images/images/Fryums Packing Machine/FP-350.png" alt="FP-350" />
           </div>
           <div class="product-body">
-            <h3>Hydraulic Press Machines</h3>
-            <p>Heavy-duty hydraulic presses for stamping, forging, forming, and assembly applications. Available in
-              C-frame, H-frame, and four-column configurations.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>FP-350</h3>
+            <p>High-speed packing solution for various snack items, ensuring durability and consistency.</p>
+            <a href="FP-350.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="product-card fade-up delay-3" data-cat="machinery">
+        <div class="product-card fade-up delay-3" data-cat="Fryums Packing Machine">
           <div class="product-img">
-            <!-- <img src="product-pneumatic.jpg" alt="Pneumatic Systems" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-pneumatic.jpg</p>
-            </div>
+            <img src="images/images/Fryums Packing Machine/FP-503.png" alt="FP-503" />
           </div>
           <div class="product-body">
-            <h3>Pneumatic Systems & Cylinders</h3>
-            <p>Complete pneumatic solutions including cylinders, valves, FRL units, and air preparation components for
-              automation and manufacturing lines.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>FP-503</h3>
+            <p>Pneumatic bagger model optimized for high-volume production with minimal maintenance.</p>
+            <a href="FP-503.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="product-card fade-up delay-1" data-cat="handling">
+
+        <!-- Namkeen Packing Machine -->
+        <div class="product-card fade-up delay-1" data-cat="namkeen packing machine">
           <div class="product-img">
-            <!-- <img src="product-conveyor.jpg" alt="Conveyor Systems" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-conveyor.jpg</p>
-            </div>
+            <img src="images/images/namkeen packing machine/10 Head Weigher With Pneumatic Bagger Model No. FP-503.png"
+              alt="10 Head Weigher With Pneumatic Bagger Model No. FP-503" />
           </div>
           <div class="product-body">
-            <h3>Conveyor & Elevator Systems</h3>
-            <p>Belt conveyors, roller conveyors, bucket elevators, and screw conveyors for efficient material movement
-              across warehouses and production floors.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>10 Head Weigher With Pneumatic Bagger</h3>
+            <p>Model No. FP-503. Precision weighing and bagging for namkeen and other granular products.</p>
+            <a href="FP-503-namkeen.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="product-card fade-up delay-2" data-cat="handling">
+        <div class="product-card fade-up delay-2" data-cat="namkeen packing machine">
           <div class="product-img">
-            <!-- <img src="product-forklift.jpg" alt="Forklifts & Stackers" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-forklift.jpg</p>
-            </div>
+            <img src="images/images/namkeen packing machine/14 Head Weigher with Servo Bagger Model No. FP-350 VC.png"
+              alt="14 Head Weigher with Servo Bagger Model No. FP-350 VC" />
           </div>
           <div class="product-body">
-            <h3>Forklifts & Electric Stackers</h3>
-            <p>Electric counterbalance forklifts, reach trucks, pallet trucks, and high-lift stackers for safe and
-              efficient warehouse and shopfloor operations.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>14 Head Weigher with Servo Bagger</h3>
+            <p>Model No. FP-350 VC. High-performance servo-controlled bagging system for maximum accuracy.</p>
+            <a href="FP-350-VC.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="product-card fade-up delay-3" data-cat="process">
+        <div class="product-card fade-up delay-3" data-cat="namkeen packing machine">
           <div class="product-img">
-            <!-- <img src="product-mixer.jpg" alt="Industrial Mixers" /> -->
-            <div class="img-placeholder"><i class="fas fa-gears fa-2x" style="color:rgba(10,44,110,0.15);"></i>
-              <p style="color:var(--text-light);font-size:0.75rem;">product-mixer.jpg</p>
-            </div>
+            <img src="images/images/namkeen packing machine/14 Head Weigher with Servo Bagger Model No. FP-504.png"
+              alt="14 Head Weigher with Servo Bagger Model No. FP-504" />
           </div>
           <div class="product-body">
-            <h3>Industrial Mixers & Blenders</h3>
-            <p>Ribbon blenders, paddle mixers, and high-shear mixers for chemical, pharma, food processing, and powder
-              blending applications.</p>
-            <a href="#contact" class="product-link">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            <h3>14 Head Weigher with Servo Bagger</h3>
+            <p>Model No. FP-504. Robust construction and high-speed operation for large-scale production.</p>
+            <a href="FP-504.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-1" data-cat="namkeen packing machine">
+          <div class="product-img">
+            <img
+              src="images/images/namkeen packing machine/4 Head Linear Weigher with Pneumatic Bagger Model No. FP-502.png"
+              alt="4 Head Linear Weigher with Pneumatic Bagger Model No. FP-502" />
+          </div>
+          <div class="product-body">
+            <h3>4 Head Linear Weigher with Pneumatic Bagger</h3>
+            <p>Model No. FP-502. Efficient linear weighing solution for smaller production requirements.</p>
+            <a href="FP-502.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-2" data-cat="namkeen packing machine">
+          <div class="product-img">
+            <img src="images/images/namkeen packing machine/Collar Type Servo Packaging Machine Model No. FP-250.png"
+              alt="Collar Type Servo Packaging Machine Model No. FP-250" />
+          </div>
+          <div class="product-body">
+            <h3>Collar Type Servo Packaging Machine</h3>
+            <p>Model No. FP-250. Versatile servo-driven packaging for namkeen and diverse snack types.</p>
+            <a href="FP-250.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-3" data-cat="namkeen packing machine">
+          <div class="product-img">
+            <img src="images/images/namkeen packing machine/High Speed Mini Cup Filler Machine Model No. FP-1001.png"
+              alt="High Speed Mini Cup Filler Machine Model No. FP-1001" />
+          </div>
+          <div class="product-body">
+            <h3>High Speed Mini Cup Filler Machine</h3>
+            <p>Model No. FP-1001. Accelerated cup filling for smaller packets with extreme precision.</p>
+            <a href="FP-1001.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-1" data-cat="namkeen packing machine">
+          <div class="product-img">
+            <img src="images/images/namkeen packing machine/High Speed Servo Cup Filler Machine Model No. FP-350.png"
+              alt="High Speed Servo Cup Filler Machine Model No. FP-350" />
+          </div>
+          <div class="product-body">
+            <h3>High Speed Servo Cup Filler Machine</h3>
+            <p>Model No. FP-350. Top-tier servo-cup filling for high-demand production lines.</p>
+            <a href="FP-350-servo-cup.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-2" data-cat="namkeen packing machine">
+          <div class="product-img">
+            <img
+              src="images/images/namkeen packing machine/PLC Pneumatic Collar Type Packing Machine Model No. FP-501-B.png"
+              alt="PLC Pneumatic Collar Type Packing Machine Model No. FP-501-B" />
+          </div>
+          <div class="product-body">
+            <h3>PLC Pneumatic Collar Type Packing Machine</h3>
+            <p>Model No. FP-501-B. Automated PLC-controlled pneumatic packing for namkeen snacks.</p>
+            <a href="FP-501-B.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Snack Packing Machine -->
+        <div class="product-card fade-up delay-1" data-cat="snack packing machine">
+          <div class="product-img">
+            <img src="images/images/snack packing machine/10 Head Weigher With Pneumatic Bagger Model No. FP-503.png"
+              alt="10 Head Weigher With Pneumatic Bagger Model No. FP-503" />
+          </div>
+          <div class="product-body">
+            <h3>10 Head Weigher (Snack Version)</h3>
+            <p>Model No. FP-503. Specialized pneumatic bagging for various snack food applications.</p>
+            <a href="FP-503-snack.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-2" data-cat="snack packing machine">
+          <div class="product-img">
+            <img src="images/images/snack packing machine/14 Head Weigher with Servo Bagger Model No. FP-350 VC.png"
+              alt="14 Head Weigher with Servo Bagger Model No. FP-350 VC" />
+          </div>
+          <div class="product-body">
+            <h3>14 Head Weigher (Snack Version)</h3>
+            <p>Model No. FP-350 VC. High-speed servo bagging optimized for snack items.</p>
+            <a href="FP-350-VC-snack.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-3" data-cat="snack packing machine">
+          <div class="product-img">
+            <img src="images/images/snack packing machine/14 Head Weigher with Servo Bagger Model No. FP-504.png"
+              alt="14 Head Weigher with Servo Bagger Model No. FP-504" />
+          </div>
+          <div class="product-body">
+            <h3>14 Head Weigher (Snack Version)</h3>
+            <p>Model No. FP-504. Durable snack packaging system with advanced weighing technology.</p>
+            <a href="FP-504-snack.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-1" data-cat="snack packing machine">
+          <div class="product-img">
+            <img
+              src="images/images/snack packing machine/4 Head Linear Weigher with Pneumatic Bagger Model No. FP-502.png"
+              alt="4 Head Linear Weigher with Pneumatic Bagger Model No. FP-502" />
+          </div>
+          <div class="product-body">
+            <h3>4 Head Linear Weigher (Snack Version)</h3>
+            <p>Model No. FP-502. Versatile linear weighing and pneumatic bagging for snacks.</p>
+            <a href="FP-502-snack.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Tea Packing Machine -->
+        <div class="product-card fade-up delay-1" data-cat="tea packing machine">
+          <div class="product-img">
+            <img src="images/images/tea packing machine/Model No. FP-301-A.png" alt="Model No. FP-301-A" />
+          </div>
+          <div class="product-body">
+            <h3>Tea Packing Machine FP-301-A</h3>
+            <p>Precision-engineered machine for tea leaf and dust packaging with freshness protection.</p>
+            <a href="FP-301-A.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-2" data-cat="tea packing machine">
+          <div class="product-img">
+            <img src="images/images/tea packing machine/TP 501B.png" alt="TP 501B" />
+          </div>
+          <div class="product-body">
+            <h3>Tea Packing Machine TP 501B</h3>
+            <p>High-reliability tea packaging solution for various bag sizes and weight requirements.</p>
+            <a href="TP-501B.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Spice Packaging Machine -->
+        <div class="product-card fade-up delay-1" data-cat="spice packaging machine">
+          <div class="product-img">
+            <img src="images/images/spice packaging/High Speed Aurge Filler.png" alt="High Speed Auger Filler" />
+          </div>
+          <div class="product-body">
+            <h3>High Speed Auger Filler</h3>
+            <p>Rapid and accurate filling for powdered spices and other fine-grained products.</p>
+            <a href="high-speed-auger-filler.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="product-card fade-up delay-2" data-cat="spice packaging machine">
+          <div class="product-img">
+            <img src="images/images/spice packaging/PLC Type Auger Fillera.png" alt="PLC Type Auger Filler" />
+          </div>
+          <div class="product-body">
+            <h3>PLC Type Auger Filler</h3>
+            <p>Advanced PLC-controlled auger filler for precision spice packaging and quality control.</p>
+            <a href="plc-auger-filler.html" target="_blank" class="product-link">Explore Now <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -2875,11 +3012,13 @@
           <div class="footer-col">
             <h4>Our Products</h4>
             <div class="footer-links">
-              <a href="#products">CNC Machining Centres</a>
-              <a href="#products">Hydraulic Press Machines</a>
-              <a href="#products">Conveyor & Elevator Systems</a>
-              <a href="#products">Forklifts & Stackers</a>
-              <a href="#products">Industrial Mixers</a>
+              <a href="#products" onclick="filterProductsByFolder('Fryums Packing Machine')">Fryums Packing Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('namkeen packing machine')">Namkeen Packing
+                Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('snack packing machine')">Snack Packing Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('tea packing machine')">Tea Packing Machine</a>
+              <a href="#products" onclick="filterProductsByFolder('spice packaging machine')">Spice Packaging
+                Machine</a>
             </div>
           </div>
 
@@ -3018,6 +3157,19 @@
       }
     }
 
+    // Set initial product filter
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstFilterBtn = document.querySelector('.filter-btn.active');
+      if (firstFilterBtn) {
+        const cat = firstFilterBtn.textContent.trim();
+        // Trigger filter but without changing active class (already done in HTML)
+        document.querySelectorAll('.product-card').forEach(card => {
+          if (card.dataset.cat === cat) card.style.display = '';
+          else card.style.display = 'none';
+        });
+      }
+    });
+
     // ---- Active nav on scroll ----
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -3079,6 +3231,16 @@
           card.style.display = '';
         } else {
           card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterProductsByFolder(folder) {
+      // Find the filter button corresponding to this folder and click it
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.textContent.trim().toLowerCase() === folder.toLowerCase()) {
+          filterProducts(btn, folder);
         }
       });
     }
